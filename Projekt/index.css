@@ -1,0 +1,192 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url('path/to/hero-image.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 2rem;
+    position: relative; /* Ensure relative positioning for absolute button positioning */
+}
+
+/* Adjust height and background-size for different image heights */
+.image-grid > div {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Adjust these classes as needed for different image sizes */
+.image1 {
+    background-image: url('Images/urbandrip.webp');
+    height: 550px;
+}
+
+.image2 {
+    background-image: url('Images/ulje.webp');
+    height: 400px;
+
+}
+
+.image3 {
+    background-image: url('Images/drip.jpg');
+    height: 400px;
+    
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.product {
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: 200px;
+}
+
+.product h2 {
+    margin-bottom: 1rem;
+}
+
+.product-image img {
+    width: 100%;
+    height: 20px; 
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.product-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.shop-now-btn {
+    padding: 0.5rem 1rem; 
+    font-size: 0.8rem; 
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.shop-now-btn:hover {
+    background-color: #555;
+}
+
+.new-products {
+    text-align: center;
+    padding: 2rem;
+}
+
+.new-products {
+    text-align: center;
+    padding: 2rem;
+    overflow: hidden; 
+}
+
+.carousel-container {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto; 
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel .product img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 2rem;
+}
+
+/* Styles for tablets */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+    }
+
+    .image1,
+    .image2,
+    .image3 {
+        width: 100%;
+    }
+}
+
+/* Styles for mobile */
+@media (max-width: 480px) {
+    .image-grid {
+        padding: 1rem; 
+    }
+
+    .carousel-container {
+        overflow: scroll; 
+    }
+}
